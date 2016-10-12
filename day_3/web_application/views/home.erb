@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <script type="text/javascript" src="/scripts.js"></script>
+</head>
+<body>
+  <h1>World DashBoard</h1> 
+  
+  <h2>My Bucket List:</h2>
+  <ul>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Country Name</th>
+        <th>Population</th>
+        <th>Population Density</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% for country in COUNTRIES %>
+      <tr>
+        <td data-name="<%= country["name"] %>"> <%= country["name"] %> </td>
+        <td> <%= country["population"] %> </td>
+        <td> <%= population_density( country ) %> </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+
+</body>
+</html>
